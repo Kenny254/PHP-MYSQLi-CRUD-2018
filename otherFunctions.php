@@ -9,3 +9,19 @@ $value=$row['price']; // Value assignment
                 $money=$english_format_number = number_format($number);
                 echo $money;          
 // 1,235 ?>   // Currency place holder.
+
+//Get id value and call related item.
+
+<?php
+    // Include the database configuration file
+    include 'dbConfig.php';
+    
+    // Get records from the database
+    $id = $_GET['id'];
+
+    $query = $db->query("SELECT * FROM `products`  WHERE id=' $id'");
+    
+    if($query->num_rows > 0){ 
+        while($row = $query->fetch_assoc()){ 
+            
+    ?>
