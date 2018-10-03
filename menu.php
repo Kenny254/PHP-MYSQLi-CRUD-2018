@@ -1,73 +1,9 @@
-                       Fashion-Women
-											<li><a href="products.php">Shirts</a></li>
-											<li><a href="products.php">Jeans</a></li>
-											<li><a href="products.php">Suit</a></li>
-											<li><a href="products.php">Blazers</a></li>
-											<li><a href="products.php">Mens</a></li>
-											<li><a href="products.php">Shoes</a></li>
-											<li><a href="products.php">Bottoms</a></li>
-                      
-                      Fashion-Men
-                      <li><a href="products.php">T-Shirts</a></li>
-											<li><a href="products.php">Shirts</a></li>
-											<li><a href="products.php">Jeans</a></li>
-											<li><a href="products.php">Suit</a></li>
-											<li><a href="products.php">Blazers</a></li>
-											<li><a href="products.php">Mens</a></li>
-											<li><a href="products.php">Shoes</a></li>
-											<li><a href="products.php">Bottoms</a></li>
-                      
-                     fashion- Kids
-                      <li><a href="products.php">T-Shirts</a></li>
-											<li><a href="products.php">Shirts</a></li>
-											<li><a href="products.php">Jeans</a></li>
-											<li><a href="products.php">Suit</a></li>
-											<li><a href="products.php">Blazers</a></li>
-											<li><a href="products.php">Mens</a></li>
-											<li><a href="products.php">Shoes</a></li>
-											<li><a href="products.php">Bottoms</a></li>
-                      
-                       Electronics-appliances
-                      <li><a href="products.php">T-Shirts</a></li>
-											<li><a href="products.php">Shirts</a></li>
-											<li><a href="products.php">Jeans</a></li>
-											<li><a href="products.php">Suit</a></li>
-											<li><a href="products.php">Blazers</a></li>
-											<li><a href="products.php">Mens</a></li>
-											<li><a href="products.php">Shoes</a></li>
-											<li><a href="products.php">Bottoms</a></li>
-                      
-                       Electronics- Computing
-                      <li><a href="products.php">T-Shirts</a></li>
-											<li><a href="products.php">Shirts</a></li>
-											<li><a href="products.php">Jeans</a></li>
-											<li><a href="products.php">Suit</a></li>
-											<li><a href="products.php">Blazers</a></li>
-											<li><a href="products.php">Mens</a></li>
-											<li><a href="products.php">Shoes</a></li>
-											<li><a href="products.php">Bottoms</a></li>
-                      
-                      
-                       Electronics-smartphones
-                      <li><a href="products.php">T-Shirts</a></li>
-											<li><a href="products.php">Shirts</a></li>
-											<li><a href="products.php">Jeans</a></li>
-											<li><a href="products.php">Suit</a></li>
-											<li><a href="products.php">Blazers</a></li>
-											<li><a href="products.php">Mens</a></li>
-											<li><a href="products.php">Shoes</a></li>
-											<li><a href="products.php">Bottoms</a></li>
-                      
-                      
-                      
-                      QUERRY FUNCTION
-                      
-                      <?php
+<?php
                                             // Include the database configuration file
                                             include '../server/dbConfig.php';
     
                                             // Get records from the database
-                                            $query = $db->query("SELECT * FROM `brands` ORDER BY id DESC Limit 7 ");
+                                            $query = $db->query("SELECT * FROM `brands` WHERE name IN ('Samsung', 'Sony', 'Lg','Ramtons', 'Mica', 'Von Point', 'Sterling', 'Philips', 'Ampex', 'Generic', 'Hisense');");
     
                                             if($query->num_rows > 0){ 
                                             while($row = $query->fetch_assoc()){ 
